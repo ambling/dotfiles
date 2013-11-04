@@ -30,10 +30,25 @@
 #  (The pipes indicate the edges of the xterm/console).
 
 # Green text, time, and date; windows in blue:
-hardstatus alwayslastline "%{=b}%{G} Screen(s): %{b}%w %=%{kG}%C%A  %D, %M/%d/%Y "
+# hardstatus alwayslastline "%{=b}%{G} Screen(s): %{b}%w %=%{kG}%C%A  %D, %M/%d/%Y "
+hardstatus off
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W} %c %{g}]'
 
 # Turn off start message:
 startup_message off
 
 # Set messages timeout to one second:
 msgwait 1
+
+# change the function key from C-a to `, for convinence of emacs
+escape ``
+
+# start with screen 1
+bind c screen 1
+bind ^c screen 1
+bind 0 select 10                                                            
+screen 1
+
+# use 256 colors
+term screen-256color
