@@ -52,3 +52,6 @@ screen 1
 
 # use 256 colors
 term screen-256color
+
+# support of scroll
+termcapinfo xterm* ti@:te@ 
