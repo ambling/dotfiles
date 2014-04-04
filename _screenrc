@@ -41,8 +41,8 @@ startup_message off
 # Set messages timeout to one second:
 msgwait 1
 
-# change the function key from C-a to `, for convinence of emacs
-escape ``
+# change the function key from C-a to C-b
+escape ^Bb
 
 # start with screen 1
 bind c screen 1
